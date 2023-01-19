@@ -3,8 +3,8 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
-import {Add} from '../store/actions';
-
+import {Add} from '../Actions/actions';
+import {Check} from '../Actions/actions'
 const AddUser = () => {
   const [user, setUser] = useState({
     id:"",
@@ -40,7 +40,7 @@ const handleChange=(e)=>{
           onChange={handleChange} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Working" />
+        <Form.Check type="checkbox" label="Working" onClick={() => { dispatch(Check()) }}/>
         </Form.Group>
         <Button variant="primary" type="submit" onClick={() => dispatch(Add(user))}>
           Add

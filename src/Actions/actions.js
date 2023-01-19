@@ -5,9 +5,9 @@ return{
     type:ADD,
     payload:payload
 }}
-export const Check =()=>{
+export const Check =(id)=>{
     return{
 type:CHECK,
-
+payload:id
     }
 }
