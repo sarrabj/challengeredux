@@ -1,4 +1,4 @@
-import {ADD,CHECK,DELETE} from './actionType'
+import {ADD,CHECK,DELETE,EDIT} from './actionType'
 
 export const Add =(payload)=>{
 return{
@@ -15,5 +15,11 @@ export const Delete =(id)=>{
     return{
 type:DELETE,
 payload:id
+    }
+}
+export const Edit =(id,name)=>{
+    return{
+type:EDIT,
+payload:{id,name}
     }
 }
