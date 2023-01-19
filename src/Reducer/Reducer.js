@@ -1,4 +1,4 @@
-import {ADD,CHECK} from '../Actions/actionType'
+import {ADD,CHECK,DELETE} from '../Actions/actionType'
 const initialState={
         users:[{id:"1",
         name:"Sarra",
@@ -18,6 +18,11 @@ const Reducer= (state=initialState,action)=>{
                     ...state,
                     users: [...state.users.map(el=>el.id ===action.payload?{...el,isWorking:!el.isWorking}:el
                         )]}
+                        case DELETE:
+                            return{...state,
+                                users:[...state.users.filter(el=>el.id !== action.payload)  ]
+
+                            }
                 default:
                     return state
         }

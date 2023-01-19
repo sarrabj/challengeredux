@@ -19,7 +19,11 @@ const handleChange=(e)=>{
     const {name,value}=e.target;
     setUser({...user,[name]:value});
 }
+const handleadd=(e)=>{
+  e.preventDefault();
 
+  dispatch(Add(user))
+}
 
   return (
     <div>
@@ -42,7 +46,7 @@ const handleChange=(e)=>{
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Working" onClick={() => { dispatch(Check()) }}/>
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={() => dispatch(Add(user))}>
+        <Button variant="primary" type="submit" onClick={handleadd}>
           Add
         </Button>
       </Form>

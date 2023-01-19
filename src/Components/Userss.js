@@ -10,7 +10,7 @@ const Userss = ({el}) => {
         <tr>
           <th>{el.name}</th>
           <th>{el.age}</th>
-          <th>{el.isWorking? <th>working</th>: <th>not working</th>}</th>
+          
         </tr>
       </thead>
       
