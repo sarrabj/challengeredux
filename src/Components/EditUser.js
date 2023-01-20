@@ -24,7 +24,7 @@ const EditUser = ({el}) => {
     <div>
 <Button variant="primary" onClick={() => {
             handleShow()
-          }} style={{backgroundColor:'white',borderRadius:'5px',margin:'5px',borderColor:'aquamarine',color:'black'}}>
+          }} style={{backgroundColor:'white',borderRadius:'5px',margin:'5px',borderColor:'white',color:'black',wdth:'15px'}}>
             Edit
           </Button>
 

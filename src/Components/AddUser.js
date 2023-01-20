@@ -24,10 +24,13 @@ const handleadd=(e)=>{
 
   dispatch(Add(user))
 }
+const handleChangeisWorking=(e)=>{
+  setUser({...user,isWorking:e.target.checked})
+}
 
   return (
-    <div>
-      <Form >
+    <div style={{display:'flex',flexDirection:'column',alignItems:'center',margin:'40px' }}>
+      <Form style={{display:"flex",flexDirection:"column", alignItems:"center",borderStyle:'outset',width:'30%',borderColor:'pink'}} >
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
           <Form.Control type="text" placeholder="Enter your Name"
@@ -44,9 +47,9 @@ const handleadd=(e)=>{
           onChange={handleChange} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Working" onClick={() => { dispatch(Check()) }}/>
+        <Form.Check type="checkbox" label="Working" onChange={handleChangeisWorking}/>
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={handleadd}>
+        <Button variant="primary" type="submit" onClick={handleadd} style={{backgroundColor:'lightsalmon',borderColor:'white'}}>
           Add
         </Button>
       </Form>
