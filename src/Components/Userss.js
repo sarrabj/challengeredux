@@ -9,6 +9,14 @@ const Userss = ({el}) => {
   return (
     <div style={{}}>
         <Table striped bordered hover style={{backgroundColor:'lightsalmon',borderStyle:'double',borderColor:'gray'}} >
+        <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Age</th>
+          <th> Actions</th>
+          <th>Status</th>
+        </tr>
+      </thead>
       <thead>
         <tr>
           <th style={{width:'200px'}} >{el.name}</th>
